@@ -20,3 +20,9 @@
     left: 44%;
     font-family: 'Times New Roman', Times, serif;
 }
+
+.btnContain{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}

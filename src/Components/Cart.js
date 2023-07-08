@@ -7,6 +7,7 @@ import {
   toggleCart,
 } from "../store/slice/CartSlice";
 import "./Cart.css";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const disptach = useDispatch();
@@ -28,11 +29,20 @@ function Cart() {
     disptach(decrementItem(id));
   };
   const cartQuentity = cartItems.length;
- 
-   
+
   return (
     <>
       <div className="boxOfCart">
+        <div className="btnContain">
+          <button className="btn btn-primary">
+            <Link
+              style={{ color: "white", textDecoration: "none" }}
+              to="/food"
+            >
+              Add More Products
+            </Link>
+          </button>
+        </div>
         {cartQuentity === 0 ? (
           <h1 className="empty-class">Cart is Empty</h1>
         ) : (
@@ -50,8 +60,10 @@ function Cart() {
                     <h2 className="card-title">{value.name}</h2>
                   </div>
                   <img src={value.image} alt="" className="card-media" />
-                  <h3 className="card-price">Price : {value.price * value.quantity}</h3>
-                  <div >
+                  <h3 className="card-price">
+                    Price : {value.price * value.quantity}
+                  </h3>
+                  <div>
                     <button
                       className="btn btn-warning m-1"
                       onClick={() => increamentProducts(value.id)}
