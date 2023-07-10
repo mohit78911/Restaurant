@@ -1,0 +1,34 @@
+.cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.boxOfCart {
+    width: 100%;
+    min-height: 90vh;
+
+}
+
+.empty-class {
+    position: fixed;
+    top: 20rem;
+    /* left: 44%; */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.mainDivEmpty{
+    display: flex;
+    align-items: center;
+}
+
+.btnContain{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
