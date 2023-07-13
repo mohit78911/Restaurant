@@ -39,15 +39,36 @@ function Cart() {
       }
     );
   };
+  const [hurryUp, setHurryUp] = useState(true);
+  const [products, setProducts] = useState(true);
+
+  setTimeout(() => {
+    setHurryUp(!hurryUp);
+  }, 1000);
+  
+  setTimeout(() => {
+    setProducts(!products);
+  }, 1000);
+  
   return (
     <>
       <div className="boxOfCart">
         <div className="btnContain">
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" style={{ width: "150px" }}>
             <Link style={{ color: "white", textDecoration: "none" }} to="/food">
-              Add More Products
+              {products ? "ADD MORE" : "PRODUCTS"}
             </Link>
           </button>
+          {cartQuentity === 0 ? null : (
+            <button className="btn btn-danger" style={{ width: "150px" }}>
+              <Link
+                style={{ color: "white", textDecoration: "none" }}
+                to="/placeorder"
+              >
+                {hurryUp ? "HURRY UP" : "PLACEORDER"}
+              </Link>
+            </button>
+          )}
         </div>
         {cartQuentity === 0 ? (
           <div className="mainDivEmpty">
@@ -55,8 +76,20 @@ function Cart() {
           </div>
         ) : (
           <>
-            <h4 style={{ display: "flex", justifyContent: "center",fontFamily:'Cormorant Garamond',opacity:"0.8"}} className="mt-2">
-              YOU HAVE <span style={{color:"red",textShadow:"0px 0px 3px black"}}>&nbsp;"{cartQuentity}"&nbsp;</span> FOOD ITEMS IN YOUR CART
+            <h4
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontFamily: "Cormorant Garamond",
+                opacity: "0.8",
+              }}
+              className="mt-2"
+            >
+              YOU HAVE{" "}
+              <span style={{ color: "red", textShadow: "0px 0px 3px black" }}>
+                &nbsp;"{cartQuentity}"&nbsp;
+              </span>{" "}
+              FOOD ITEMS IN YOUR CART
             </h4>
             <section className="main-card--cointainer ">
               {cartItems.map((value, i) => (
@@ -108,12 +141,6 @@ function Cart() {
                 </div>
               ))}
             </section>
-            <div style={{
-              display:"flex",
-              justifyContent:"center"
-            }}>
-            <button className="btn btn-danger" ><Link style={{color:"white",textDecoration:"none"}}  to="/placeorder">PlaceOrder</Link></button>
-            </div>
           </>
         )}
       </div>

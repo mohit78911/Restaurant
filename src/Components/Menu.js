@@ -73,10 +73,10 @@ export default function Menu({ menuData }) {
               </div>
               <img src={value.image} alt="" className="card-media" />
               <span
-                className="card-tag subtle "
+                className={`card-tag subtle`}
                 onClick={() => AddToCarthandle(value)}
               >
-                {added ? "Added" : "ADD TO CART"}
+                {added? "Added" : "ADD TO CART"}
               </span>
             </div>
           </div>

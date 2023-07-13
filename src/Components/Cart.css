@@ -32,8 +32,9 @@
     justify-content: center;
     margin-top: 8px;
 }
-
-.placeBtn{
-    
+.animationClass{
+    width: 200px;
+    background-size: cover;
+    background-position: 100%;
+    background-image: url('https: //media.tenor.com/cYS07syGIM4AAAAM/hurry-up.gif');
 }
- 
