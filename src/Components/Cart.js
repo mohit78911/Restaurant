@@ -108,6 +108,12 @@ function Cart() {
                 </div>
               ))}
             </section>
+            <div style={{
+              display:"flex",
+              justifyContent:"center"
+            }}>
+            <button className="btn btn-danger" ><Link style={{color:"white",textDecoration:"none"}}  to="/placeorder">PlaceOrder</Link></button>
+            </div>
           </>
         )}
       </div>

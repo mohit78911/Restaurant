@@ -7,6 +7,7 @@ import Cart from "./Components/Cart";
 import Registration from "./Components/Registration";
 import Login from "./Components/Login";
 import Details from "./Components/Details";
+import CheckOut from "./Components/CheckOut";
 
 export default function App() {
   return (
@@ -20,9 +21,11 @@ export default function App() {
           <Route path="/" element={<Registration/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/details" element={<Details/>}/>
+          <Route path="/placeorder" element={<CheckOut/>}/>
 
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }

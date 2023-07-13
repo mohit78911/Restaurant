@@ -1,0 +1,26 @@
+.mainOrderBox{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+      
+}
+
+.secondClass{
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.stylingText{
+font-family: 'DM Serif Text';
+ text-shadow: 0px 0px 15px black;
+}
+
+.imgClass{
+     
+     
+}
